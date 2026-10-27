@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Play Your World</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home" class="logo">GAME<span>ZONE</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#games" class="nav-button">Explore Games</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</p>
+                <h1>LEVEL UP YOUR<br> <span>GAMING WORLD.</span></h1>
+                <p class="hero-text">
+                    Discover exciting games, explore new worlds,
+                    and find your next favorite adventure.
+                </p>
+                <a href="#games" class="primary-button">Explore Games ↗</a>
+            </div>
+            <div class="hero-art" aria-hidden="true">🎮</div>
+        </section>
+
+        <section class="games-section" id="games">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CHOOSE YOUR ADVENTURE</p>
+                    <h2>Explore Games</h2>
+                </div>
+                <span class="game-count">06 GAMES</span>
+            </div>
+
+            <label class="search-box">
+                <span>⌕</span>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search games or categories..."
+                    aria-label="Search games by name or category"
+                >
+            </label>
+
+            <div class="game-grid" id="gameGrid">
+
+                <article class="game-card"
+                    data-name="Cyber Strike"
+                    data-category="Action"
+                    data-description="Enter a futuristic battlefield, overcome dangerous missions, and test your action skills.">
+                    <div class="game-image cyber">⚡<span>ACTION</span></div>
+                    <div class="card-content">
+                        <p class="category">ACTION / SCI-FI</p>
+                        <h3>Cyber Strike</h3>
+                        <p>Fight for the future.</p>
+                        <button class="play-button">Play Now ↗</button>
+                    </div>
+                </article>
+
+                <article class="game-card"
+                    data-name="Speed Rush"
+                    data-category="Racing"
+                    data-description="Race against the clock, push your speed to the limit, and chase victory on the track.">
+                    <div class="game-image racing">🏎️<span>RACING</span></div>
+                    <div class="card-content">
+                        <p class="category">RACING / SPORTS</p>
+                        <h3>Speed Rush</h3>
+                        <p>Speed. Skill. Victory.</p>
+                        <button class="play-button">Play Now ↗</button>
+                    </div>
+                </article>
+
+                <article class="game-card"
+                    data-name="Shadow Quest"
+                    data-category="Adventure"
+                    data-description="Explore mysterious lands, discover hidden secrets, and complete challenging quests.">
+                    <div class="game-image shadow">🌌<span>ADVENTURE</span></div>
+                    <div class="card-content">
+                        <p class="category">ADVENTURE / FANTASY</p>
+                        <h3>Shadow Quest</h3>
+                        <p>Explore the unknown.</p>
+                        <button class="play-button">Play Now ↗</button>
+                    </div>
+                </article>
+
+                <article class="game-card"
+                    data-name="Brain Master"
+                    data-category="Puzzle"
+                    data-description="Challenge your mind with puzzles that test your logic, concentration, and problem-solving skills.">
+                    <div class="game-image brain">🧩<span>PUZZLE</span></div>
+                    <div class="card-content">
+                        <p class="category">PUZZLE / LOGIC</p>
+                        <h3>Brain Master</h3>
+                        <p>Think beyond limits.</p>
+                        <button class="play-button">Play Now ↗</button>
+                    </div>
+                </article>
+
+                <article class="game-card"
+                    data-name="Galaxy Explorer"
+                    data-category="Space"
+                    data-description="Travel through the galaxy, discover distant planets, and explore the mysteries of space.">
+                    <div class="game-image galaxy">🚀<span>SPACE</span></div>
+                    <div class="card-content">
+                        <p class="category">SPACE / EXPLORATION</p>
+                        <h3>Galaxy Explorer</h3>
+                        <p>Your universe awaits.</p>
+                        <button class="play-button">Play Now ↗</button>
+                    </div>
+                </article>
+
+                <article class="game-card"
+                    data-name="Zombie Survival"
+                    data-category="Survival"
+                    data-description="Survive a dangerous zombie outbreak, make smart decisions, and see how long you can last.">
+                    <div class="game-image zombie">🧟<span>SURVIVAL</span></div>
+                    <div class="card-content">
+                        <p class="category">SURVIVAL / HORROR</p>
+                        <h3>Zombie Survival</h3>
+                        <p>Survive the night.</p>
+                        <button class="play-button">Play Now ↗</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="noResults" class="no-results" hidden>
+                No games found. Try another search!
+            </p>
+
+            <section class="details-panel" id="gameDetails" hidden>
+                <p class="eyebrow">GAME INFORMATION</p>
+                <h2 id="detailName"></h2>
+                <p id="detailDescription"></p>
+                <p>Category: <span id="detailCategory"></span></p>
+                <button id="closeDetails" class="secondary-button">
+                    Close Details
+                </button>
+            </section>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="eyebrow">ABOUT GAMEZONE</p>
+            <h2>One place. Endless adventures.</h2>
+            <p>
+                GameZone is a simple gaming discovery website created
+                with HTML, CSS, and JavaScript as a web development
+                internship mini project.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">GAME<span>ZONE</span></a>
+        <p>© 2026 GameZone. Created for learning and fun.</p>
+    </footer>
+
+</body>
+</html>
